@@ -1,0 +1,6 @@
+C:\Users\kagan\Desktop\pi\pi\bin\Debug\pi.exe.config
+C:\Users\kagan\Desktop\pi\pi\bin\Debug\pi.exe
+C:\Users\kagan\Desktop\pi\pi\bin\Debug\pi.pdb
+C:\Users\kagan\Desktop\pi\pi\obj\Debug\pi.csprojResolveAssemblyReference.cache
+C:\Users\kagan\Desktop\pi\pi\obj\Debug\pi.exe
+C:\Users\kagan\Desktop\pi\pi\obj\Debug\pi.pdb
