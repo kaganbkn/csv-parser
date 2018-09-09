@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,13 +36,11 @@ namespace pi
             args = new[] { "../../../exhibitA-input.csv" };
             var data = ReadData(args[0]);
             data = Distinct(data);
-            //find_max_client_id(data);
-            //find_max_song_id(data);
+       //   find_max_client_id(data);
+       //   find_max_song_id(data);
             Console.WriteLine("DISTINCT_PLAY_COUNT   "+ "CLIENT_COUNT");
             Expected(data);
             Console.ReadLine();
-
-
         }
 
         static IList<data> ReadData(string path)
@@ -60,21 +58,19 @@ namespace pi
 
         static IList<data> Distinct(IList<data> data)
         {
-            String temp; int unique_id;
+            bool[,] array = new bool[max_song_id, max_client_id];
             var newlist = new List<data>();
-            bool[] array = new bool[max_song_id*max_client_id];
+          
             foreach (var line in data)
             {
-                temp = line.song_id.ToString() + line.client_id.ToString();
-                unique_id = Int32.Parse(temp);
-                if (array[unique_id] == true)
+                 if (array[line.song_id,line.client_id] == true)
                 {
                     continue;
                 }
                 else
                 {
                     newlist.Add(line);
-                    array[unique_id] = true;
+                    array[line.song_id, line.client_id] = true;
                 }
             }
             return newlist;
@@ -115,10 +111,8 @@ namespace pi
                 }
 
             }
-
-
         }
-
+       
         static void find_max_client_id(IList<data> data)
         {
             int temp = data[0].client_id;
@@ -142,7 +136,7 @@ namespace pi
                     temp = line.song_id;
                 }
             }
-            Console.WriteLine("find_max_client_id : " + temp);
+            Console.WriteLine("find_max_song_id : " + temp);
         }
     }
 }
