@@ -31,6 +31,7 @@ namespace pi
                 };
             }
         }
+        //deneme
         static void Main(string[] args)
         {
             args = new[] { "../../../exhibitA-input.csv" };
