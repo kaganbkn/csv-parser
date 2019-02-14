@@ -38,6 +38,7 @@ namespace pi
         //deneme5
         //deneme6
         //deneme7
+        //deneme8
         static void Main(string[] args)
         {
             args = new[] { "../../../exhibitA-input.csv" };
